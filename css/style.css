@@ -265,3 +265,19 @@ section {
     background-color: #004d73 !important;
     transform: scale(1.1);
 }
+/* PERBAIKAN TAMBAHAN UNTUK NAVIGASI */
+.navbar.bg-yapen-blue {
+    background-color: #004d73 !important;
+}
+
+.navbar .nav-link {
+    color: white !important;
+}
+
+.navbar .nav-link:hover {
+    color: #ffc107 !important;
+}
+
+.navbar-brand {
+    color: white !important;
+}

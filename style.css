@@ -1,267 +1,75 @@
-/* ==========================================
-   1. PENGATURAN UMUM WEBSITE & BACKGROUND KUSTOM
-   ========================================== */
-body {
-    font-family: 'Poppins', sans-serif;
-    color: #2c3e50; /* Menggunakan warna abu gelap kebiruan agar lebih serasi */
-    background-color: #f4f8fc; /* Warna background utama solid biru langit yang sangat bersih & jernih */
-}
-
-/* Navigasi Warna Biru Samudra Yapen Premium */
+/* Warna Navigasi Biru */
 .bg-yapen-blue {
-    background-color: #004d73 !important;
+    background-color: #0a4b8c !important;
 }
 
-/* Teks Yapen Blue */
-.text-yapen {
-    color: #004d73 !important;
-}
-
-/* Tombol Berwarna Biru Yapen */
 .btn-yapen-blue {
-    background-color: #006699 !important;
-    color: #ffffff !important;
+    background-color: #0a4b8c;
+    color: white;
     border: none;
-    transition: all 0.2s ease;
 }
 
 .btn-yapen-blue:hover {
-    background-color: #004d73 !important;
-    color: #ffffff !important;
-    transform: scale(1.05);
+    background-color: #063a6e;
+    color: white;
 }
 
-.btn-outline-yapen {
-    border-color: #006699 !important;
-    color: #006699 !important;
-    transition: all 0.2s ease;
+.text-yapen {
+    color: #0a4b8c;
 }
 
-.btn-outline-yapen:hover {
-    background-color: #006699 !important;
-    color: #ffffff !important;
+.bg-yapen {
+    background-color: #0a4b8c;
 }
 
-/* HEADER BERANDA: Latar belakang menggunakan kkn.jpeg.jpg secara penuh */
+/* Background Hero dengan Gambar */
 #beranda {
-    background-image: linear-gradient(rgba(0, 77, 115, 0.4), rgba(0, 77, 115, 0.2)), 
-                      url('../images/kkn.jpeg');
+    background-image: url('kkn.jpeg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    padding: 120px 0 !important;
-}
-
-/* Kotak Beranda semi transparan agar menyatu dengan background */
-#beranda .hero-container {
-    background-color: rgba(255, 255, 255, 0.95);
-    padding: 40px;
-    border-radius: 20px;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
-    color: #2c3e50 !important;
-}
-
-/* Aturan solid background untuk mencegah background melayang menembus teks */
-.bg-white-solid {
-    background-color: #ffffff !important;
-}
-
-.bg-light-solid {
-    background-color: #f4f8fc !important;
-}
-
-/* Membungkus blok tulisan dengan Latar Belakang Glassmorphism Lembut */
-.card-glass {
-    background-color: rgba(255, 255, 255, 0.9);
-    padding: 30px;
-    border-radius: 15px;
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    box-shadow: 0 10px 30px rgba(0, 102, 153, 0.05);
-}
-
-html {
-    scroll-behavior: smooth; /* Guliran halus */
-}
-
-section {
-    scroll-margin-top: 70px; /* Batas atas agar judul tidak terpotong navbar */
-}
-
-/* ==========================================
-   2. EFEK KARTU INTERAKTIF & AKSEN WARNA BARU
-   ========================================== */
-.kartu-interaktif {
-    transition: all 0.3s ease-in-out;
-    border: 1px solid rgba(0, 102, 153, 0.12) !important;
-    background-color: #ffffff !important; /* Latar kartu solid putih murni */
-    color: #2c3e50 !important;
-}
-
-/* Mengubah warna teks detail list program utama agar pekat & tidak samar */
-.kartu-interaktif p, .kartu-interaktif ul, .kartu-interaktif li {
-    color: #2c3e50 !important; 
-    font-weight: 500; 
-}
-
-/* Efek saat kursor mouse mendekati kartu */
-.kartu-interaktif:hover {
-    transform: translateY(-8px);
-    box-shadow: 0px 15px 30px rgba(0, 102, 153, 0.15) !important;
-    border-color: #006699 !important; 
-}
-
-/* SINKRON: Penyesuaian Badge "PROGRAM UTAMA" Menjadi Biru Yapen */
-.badge.bg-primary, .badge.bg-yapen {
-    background-color: #006699 !important;
-    color: #ffffff !important;
-    font-weight: 600;
-}
-
-/* Desain kartu interaktif transparan elegan di bagian Tim KKN (#tim) */
-#tim {
-    background-color: #0a192f !important; /* Biru Gelap Deep-Sea yang sangat premium */
-}
-
-#tim h2 {
-    color: #ffc107 !important; /* Judul tetap kuning emas Uncen agar kontras */
-}
-
-#tim .kartu-interaktif {
-    background-color: rgba(255, 255, 255, 0.05) !important;
-    border: 1px solid rgba(255, 255, 255, 0.1) !important;
-    color: #ffffff !important;
-}
-
-#tim .kartu-interaktif p {
-    color: #ffc107 !important; /* Mengubah teks sub-jabatan di laci tim menjadi kuning */
-}
-
-#tim .kartu-interaktif:hover {
-    background-color: rgba(0, 102, 153, 0.2) !important; 
-    border-color: #ffc107 !important; 
-    box-shadow: 0px 10px 25px rgba(255, 193, 7, 0.15) !important;
-}
-
-/* Lingkaran di sekeliling ikon potensi */
-.icon-potensi {
-    width: 80px;
-    height: 80px;
-    background-color: rgba(0, 102, 153, 0.1); 
-    color: #006699 !important;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto;
-    transition: all 0.3s ease;
-}
-
-.kartu-interaktif:hover .icon-potensi {
-    transform: rotate(360deg) scale(1.1);
-    background-color: rgba(0, 102, 153, 0.2);
-    color: #004d73 !important;
-}
-
-/* ==========================================
-   3. STRUKTUR TIMELINE JURNAL KKN
-   ========================================== */
-.timeline {
+    min-height: 100vh;
     position: relative;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px 0;
 }
 
-.timeline::after {
+#beranda::before {
     content: '';
     position: absolute;
-    width: 4px;
-    background-color: #006699; /* Garis diganti menjadi Biru Samudra Yapen */
     top: 0;
-    bottom: 0;
-    left: 50%;
-    margin-left: -2px;
-}
-
-.timeline-item {
-    padding: 10px 40px;
-    position: relative;
-    background-color: inherit;
-    width: 50%;
-}
-
-.timeline-img {
-    width: 40px;
-    height: 40px;
-    position: absolute;
-    border-radius: 50%;
-    z-index: 1;
-    top: 15px;
-    background-color: #006699 !important;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
-.timeline-item.left {
     left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.75);
+    z-index: 1;
 }
 
-.timeline-item.right {
-    left: 50%;
+#beranda .container {
+    position: relative;
+    z-index: 2;
 }
 
-.timeline-item.left .timeline-img {
-    right: -20px;
+/* Kartu Hover */
+.kartu-interaktif {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.timeline-item.right .timeline-img {
-    left: -20px;
+.kartu-interaktif:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
 
-@media screen and (max-width: 768px) {
-    .timeline::after {
-        left: 31px;
+/* Responsive */
+@media (max-width: 992px) {
+    .navbar-nav {
+        flex-direction: column;
+        text-align: center;
+        padding: 10px 0;
     }
-
-    .timeline-item {
-        width: 100%;
-        padding-left: 70px;
-        padding-right: 25px;
-    }
-
-    .timeline-item.right {
-        left: 0%;
-    }
-
-    .timeline-item.left .timeline-img,
-    .timeline-item.right .timeline-img {
-        left: 11px;
+    .nav-item {
+        margin: 5px 0;
     }
 }
 
-/* ==========================================
-   4. DESAIN TOMBOL KEMBALI KE ATAS (BACK TO TOP)
-   ========================================== */
-#tombolAtas {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    display: none;
-    z-index: 1030;
-    border-radius: 50%;
-    width: 48px;
-    height: 48px;
-    border: none;
-    background-color: #006699 !important; /* Tombol atas diganti Biru Yapen */
-    box-shadow: 0px 4px 15px rgba(0, 102, 153, 0.3);
-    align-items: center;
-    justify-content: center;
-    transition: all 0.2s ease;
-}
-
-#tombolAtas:hover {
-    background-color: #004d73 !important;
-    transform: scale(1.1);
+.hero-container {
+    padding: 80px 0;
 }
